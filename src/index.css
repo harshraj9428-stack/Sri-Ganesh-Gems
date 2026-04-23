@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Jost", "sans-serif";
+  --font-heading: "Cormorant Garamond", "serif";
+
+  --color-midnight: #070B14;
+  --color-navy: #0A1628;
+  --color-champagne: #E8D5A3;
+  --color-steel: #4A7FA5;
+  --color-slate: #7A8FA6;
+  
+  /* Legacy mappings (if any lingering classes exist) */
+  --color-obsidian: #070B14;
+  --color-gold-bg: #0A1628;
+  --color-gold-deep: #E8D5A3;
+  --color-gold-light: #E8D5A3;
+  --color-brass: #7A8FA6;
+}
+
+@layer base {
+  body {
+    @apply bg-navy font-body text-[#F0F4F8] overflow-x-hidden scroll-smooth;
+  }
+}
+
+@layer components {
+  .font-heading { font-family: "Cormorant Garamond", serif; }
+  
+  .heading-hero {
+    @apply italic font-bold text-[36px] leading-[1.1] text-champagne md:text-[64px] lg:text-[72px];
+    font-family: var(--font-heading);
+    animation: glow-entrance 3s ease-out forwards;
+  }
+
+  @keyframes glow-entrance {
+    0% { filter: brightness(1) drop-shadow(0 0 0 rgba(232, 213, 163, 0)); opacity: 0; transform: translateY(20px); }
+    30% { opacity: 1; transform: translateY(0); }
+    50% { filter: brightness(1.4) drop-shadow(0 0 30px rgba(232, 213, 163, 0.5)); }
+    100% { filter: brightness(1) drop-shadow(0 0 10px rgba(232, 213, 163, 0.2)); }
+  }
+  
+  .heading-section {
+    @apply font-semibold text-[32px] leading-[1.2] text-champagne md:text-[42px];
+    font-family: var(--font-heading);
+  }
+  
+  .heading-card {
+    @apply font-medium text-[22px] leading-[1.3] text-champagne;
+    font-family: var(--font-heading);
+  }
+  
+  .body-text {
+    @apply font-normal text-[16px] leading-[1.7] text-[#F0F4F8]/90;
+    font-family: var(--font-body);
+  }
+  
+  .nav-text {
+    @apply font-normal text-[13px] leading-none tracking-[0.15em] uppercase;
+    font-family: var(--font-body);
+  }
+  
+  /* Optimized noise texture for dark theme */
+  .texture-bg {
+    background-color: var(--color-navy);
+    background-image: radial-gradient(rgba(232, 213, 163, 0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+    background-position: -12px -12px;
+  }
+  
+  .card-shadow { box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+  .card-shadow-hover { box-shadow: 0 20px 50px rgba(232,213,163,0.15); }
+
+  
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Luxury Custom Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--color-midnight); }
+  ::-webkit-scrollbar-thumb { 
+    background: var(--color-navy); 
+    border: 2px solid var(--color-midnight);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-champagne); }
+
+  /* Luxury Shimmer Effect */
+  .shimmer-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(232, 213, 163, 0.1),
+      transparent
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    z-index: 30;
+  }
+  .group:hover .shimmer-overlay {
+    left: 150%;
+    transition: left 0.8s ease-in-out;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-bg { background-color: #e2e8f0; overflow: hidden; position: relative; }
