@@ -55,7 +55,7 @@ export const Navbar = () => {
              <img 
                src="/logo.png" 
                alt="Sri Ganesh Gems & Jewellery Logo" 
-               className={`transition-all duration-500 object-contain ${scrolled || !isHome ? 'h-16 md:h-20' : 'h-20 md:h-32 drop-shadow-2xl'}`}
+               className={`transition-all duration-500 object-contain ${scrolled || !isHome ? 'h-20 md:h-24' : 'h-24 md:h-36 drop-shadow-2xl'}`}
                style={{ 
                  filter: 'contrast(1.2) brightness(1.1)' 
                }}

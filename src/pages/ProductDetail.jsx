@@ -142,7 +142,6 @@ const ProductDetail = () => {
                   ) : gem.category === 'Jewellery' ? (
                     <>
                       <li className="flex flex-col text-center"><span className="text-slate/70 text-[10px] uppercase tracking-[0.15em] mb-1">Style</span> <span className="font-medium text-champagne text-base">Traditional Handcrafted</span></li>
-                      <li className="flex flex-col text-center mt-2 pt-4 border-t border-champagne/5"><span className="text-slate/70 text-[10px] uppercase tracking-[0.15em] mb-2">Benefits</span> <span className="font-medium text-white leading-relaxed text-xs">{gem.benefits}</span></li>
                     </>
                   ) : (
                     <>

@@ -9,7 +9,16 @@ export const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left relative z-10">
       
       <div className="flex flex-col items-center md:items-start space-y-4">
-        <h2 className="font-heading text-3xl font-bold text-champagne">Sri Ganesh</h2>
+        <div className="relative group mb-2">
+          <div className="absolute -inset-1 bg-gradient-to-r from-champagne/50 to-gold/50 rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-1000"></div>
+          <img 
+            src="/Owner.jpg" 
+            alt="Owner" 
+            className="relative w-28 h-32 md:w-32 md:h-40 object-cover rounded-2xl border border-champagne/20 transition-all duration-500 shadow-2xl"
+          />
+        </div>
+        <p className="text-[10px] text-champagne/60 tracking-[0.3em] uppercase mb-1 font-medium">Founder & Owner</p>
+        <h2 className="font-heading text-3xl font-bold text-champagne -mt-1">Sri Ganesh</h2>
         <p className="text-[11px] tracking-[0.2em] uppercase text-slate">Gems & Jewellery</p>
         <p className="body-text text-sm text-slate/80 mt-4 max-w-xs font-light">A legacy of divine opulence since 1995, crafting sacred stories through millennia of tradition.</p>
       </div>
@@ -35,7 +44,7 @@ export const Footer = () => (
       <div>
         <h4 className="nav-text text-champagne mb-6">Follow Us</h4>
         <div className="flex justify-center md:justify-start space-x-4">
-          <motion.a whileHover={{ scale: 1.1, y: -2 }} href="#" className="w-12 h-12 rounded-full border border-slate/30 flex items-center justify-center hover:border-champagne hover:bg-champagne hover:text-midnight transition-colors duration-300"><Instagram size={18} /></motion.a>
+          <motion.a whileHover={{ scale: 1.1, y: -2 }} href="https://www.instagram.com/ganesh_gems_7?igsh=a29mZ2pqMnUwb3hm" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-slate/30 flex items-center justify-center hover:border-champagne hover:bg-champagne hover:text-midnight transition-colors duration-300"><Instagram size={18} /></motion.a>
           <motion.a whileHover={{ scale: 1.1, y: -2 }} href="#" className="w-12 h-12 rounded-full border border-slate/30 flex items-center justify-center hover:border-champagne hover:bg-champagne hover:text-midnight transition-colors duration-300"><Facebook size={18} /></motion.a>
           <motion.a whileHover={{ scale: 1.1, y: -2 }} href="#" className="w-12 h-12 rounded-full border border-slate/30 flex items-center justify-center hover:border-champagne hover:bg-champagne hover:text-midnight transition-colors duration-300"><Youtube size={18} /></motion.a>
         </div>

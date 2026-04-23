@@ -437,6 +437,17 @@ const AdminDashboard = () => {
                       </div>
                     </div>
                   </div>
+                  {editingGem.category !== 'Jewellery' && (
+                    <div className="md:col-span-2">
+                      <label className="block text-[10px] uppercase tracking-widest text-slate mb-2 pl-2 font-medium">Key Benefits</label>
+                      <textarea 
+                        className="w-full bg-midnight border border-champagne/20 rounded-3xl px-6 py-5 focus:outline-none focus:ring-4 focus:ring-champagne/20 focus:border-champagne h-28 resize-none transition-all shadow-sm text-champagne" 
+                        value={editingGem.benefits || ''} 
+                        onChange={e => setEditingGem({...editingGem, benefits: e.target.value})} 
+                        placeholder="Describe the astrological or healing benefits..."
+                      />
+                    </div>
+                  )}
                   <div className="md:col-span-2"><label className="block text-[10px] uppercase tracking-widest text-slate mb-2 pl-2 font-medium">Description</label><textarea className="w-full bg-midnight border border-champagne/20 rounded-3xl px-6 py-5 focus:outline-none focus:ring-4 focus:ring-champagne/20 focus:border-champagne h-32 resize-none transition-all shadow-sm text-champagne" value={editingGem.description} onChange={e => setEditingGem({...editingGem, description: e.target.value})} /></div>
                   <div className="md:col-span-2 flex items-center gap-4 bg-midnight/50 p-5 rounded-[2rem] border border-champagne/10 shadow-inner">
                     <input type="checkbox" id="featured" checked={editingGem.featured} onChange={e => setEditingGem({...editingGem, featured: e.target.checked})} className="w-6 h-6 accent-champagne cursor-pointer rounded" />
