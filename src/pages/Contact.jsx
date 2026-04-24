@@ -57,16 +57,25 @@ const Contact = () => {
           </div>
 
           <div 
-            className="lg:w-2/3 min-h-[500px] bg-navy rounded-[3rem] relative overflow-hidden border border-champagne/10 shadow-inner group cursor-pointer"
-            onClick={() => window.open('https://www.google.com/maps/dir//Shree+Ganesh+Gems+%26+Jwellers,+Durukhi+Gali,+Darzi+Tola,+Muradpur+Ln.+Dariyapur,+Sabzibagh,+Patna,+Bihar+800004/@25.6080374,85.1430429,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x39ed58f0094517e9:0x3c6c85847aa90c70!2m2!1d85.1573791!2d25.618039!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D', '_blank')}
+            className="lg:w-2/3 min-h-[500px] bg-navy rounded-[3rem] relative overflow-hidden border border-champagne/10 shadow-inner group"
           >
-            <div className="absolute inset-0 bg-midnight/40 backdrop-blur-sm z-10 group-hover:backdrop-blur-none group-hover:bg-transparent transition-all duration-700 flex flex-col items-center justify-center">
-              <MapPin size={64} className="mb-6 opacity-30 text-champagne animate-bounce" />
-              <p className="font-heading text-3xl text-champagne mb-3">View on Google Maps</p>
-              <p className="text-sm font-light text-slate bg-midnight/80 px-6 py-2 rounded-full">Click to open interactive map</p>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5960410714!2d85.15480417604313!3d25.61803901416738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f0094517e9%3A0x3c6c85847aa90c70!2sShree%20Ganesh%20Gems%20%26%20Jwellers!5e0!3m2!1sen!2sin!4v1745487134812!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2)' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 opacity-60 group-hover:opacity-100 transition-all duration-700"
+            ></iframe>
+            
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-midnight/80 to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-700"></div>
+            
+            <div className="absolute bottom-8 left-8 right-8 z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-500">
+              <p className="font-heading text-2xl text-champagne mb-1">Our Location</p>
+              <p className="text-xs text-slate font-light">Interactive Map • Hover to explore</p>
             </div>
-            {/* Map Placeholder Image/Texture */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cartographer.png')] opacity-30"></div>
           </div>
         </div>
       </div>
