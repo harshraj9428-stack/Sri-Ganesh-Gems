@@ -13,7 +13,7 @@ const Contact = () => {
       <ScrollToTop />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-20">
-          <motion.h1 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="heading-hero text-champagne mb-4 text-5xl md:text-6xl">Visit Our Boutique</motion.h1>
+          <motion.h1 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="heading-hero text-champagne mb-4 text-5xl md:text-6xl">Visit Our Shop</motion.h1>
           <GoldDivider />
         </div>
 
@@ -27,7 +27,7 @@ const Contact = () => {
               <motion.div whileHover={{ x: 5 }} className="flex items-start gap-6 cursor-pointer group">
                 <div className="w-12 h-12 rounded-full bg-navy/30 backdrop-blur-md border border-champagne/20 flex items-center justify-center shrink-0 text-champagne group-hover:bg-champagne group-hover:text-midnight transition-colors"><MapPin size={20} /></div>
                 <div>
-                  <p className="font-semibold mb-2 text-lg tracking-wide text-champagne">Boutique Location</p>
+                  <p className="font-semibold mb-2 text-lg tracking-wide text-champagne">Shop Location</p>
                   <p className="text-slate text-sm leading-relaxed font-light">Durukhi Gali, Darzi Tola<br/>Muradpur Ln. Dariyapur, Sabzibagh<br/>Patna, Bihar 800004</p>
                 </div>
               </motion.div>
